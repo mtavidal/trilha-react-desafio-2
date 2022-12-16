@@ -15,28 +15,41 @@ function App() {
 
 
   const handleSearchRepo = async () => {
+    let data = null;
+    try {
+      ({data} = await api.get(`repos/${currentRepo}`));
 
-    const {data} = await api.get(`repos/${currentRepo}`)
+    } catch (err) {
+      console.log(err);
+      
+    } finally {
+      console.log(data); // Could be success or error
+    }
+    
 
-    if(data.id){
+    if(data !== null){
 
       const isExist = repos.find(repo => repo.id === data.id);
-
+              
       if(!isExist){
         setRepos(prev => [...prev, data]);
+        setCurrentRepo('')
+        return
+      } else{
+        alert('Repositório já adicionado')
         setCurrentRepo('')
         return
       }
 
     }
     alert('Repositório não encontrado')
+    
 
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-
-    // utilizar filter.
+    const newList = repos.filter (repo => repo.id !== id);
+    setRepos(newList);
   }
 
 

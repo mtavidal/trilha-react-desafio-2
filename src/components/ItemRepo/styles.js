@@ -15,8 +15,10 @@ export const ItemContainer = styled.div`
     }
 
     a.remover {
-        color: #FF0000;
+        color: #FF6600;
         margin-top:20px;
+        text-align: right;
+
     }
 
     hr {
