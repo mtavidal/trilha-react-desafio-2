@@ -1,3 +1,13 @@
+# Desafio de Projeto DIO
+
+### Esse é o Desafio de Projeto da DIO, onde foi criada uma Wiki para salvar alguns repositórios do GitHub.  Nesse projeto foi utilizado o API do GitHub, JavaScript e React.
+
+Nesta versão foi adicionado:
+- Funcionalidade para remover um item lista.
+- Ajuste do alert “Repositorio não encontrado.”
+- Alert “Repositorio já selecionado”.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
